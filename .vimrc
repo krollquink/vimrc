@@ -1,3 +1,4 @@
+set hidden
 set nocompatible
 set number
 filetype off
@@ -5,13 +6,13 @@ runtime ftplugin/man.vim
 syntax enable
 set background=dark
 let g:quantum_black=1
-colorscheme solarized
+colorscheme desert
 set t_Co=256
 let g:solarized_termcolors=256
 set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
-set expandtab
+"set expandtab
 
 
 
@@ -28,10 +29,20 @@ Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'tyrannicaltoucan/vim-quantum.git'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'iamcco/markdown-preview.vim'
+"For writing
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+
 
 "For Ruby on Rails
 "Plugin 'tpope/vim-rails'
 "Plugin 'bash-support.vim'
+
+"For JavaScript
+"
 
 "For HTML
 "Plugin 'othree/html5.vim'
@@ -68,3 +79,8 @@ set splitright
 "For Python
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 
+"for Markdown Plugin
+nmap <silent> <F8> <Plug>MarkdownPreview       
+imap <silent> <F8> <Plug>MarkdownPreview      
+nmap <silent> <F7> <Plug>StopMarkdownPreview 
+imap <silent> <F7> <Plug>StopMarkdownPreview
